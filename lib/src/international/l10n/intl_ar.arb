@@ -1,0 +1,34 @@
+{
+  "@@locale" :   "ar" ,
+  "@@last_modified": "2018-05-20T17:16:46.997414",
+  "language": "English",
+  "@language": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "username": "اسم المستخدم",
+  "@username": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "كلمة المرور",
+  "@password": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "تسجيل الدخول",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notValidUsername": "اسم المستخدم غير صحيح",
+  "@notValidUsername": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordIsTooShort": "كلمة المرور غير صحيحه",
+  "@passwordIsTooShort": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "@@locale" :   "en" ,
+  "@@last_modified": "2018-05-20T17:16:46.997414",
+  "language": "عربي",
+  "@language": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "username": "Username",
+  "@username": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "Password",
+  "@password": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "Login",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notValidUsername": "Not Valid Username",
+  "@notValidUsername": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordIsTooShort": "password is too short",
+  "@passwordIsTooShort": {
+    "type": "text",
+    "placeholders": {}
+  }
+}
