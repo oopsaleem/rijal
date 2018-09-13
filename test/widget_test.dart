@@ -7,7 +7,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:rijal/main.dart';
 import 'package:rijal/src/scope_model_wrapper.dart';
 
 void main() {
