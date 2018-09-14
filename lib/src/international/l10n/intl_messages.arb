@@ -1,5 +1,10 @@
 {
-  "@@last_modified": "2018-09-11T00:47:45.122222",
+  "@@last_modified": "2018-09-14T09:27:17.247959",
+  "appTitle": "Dallal",
+  "@appTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
   "language": "عربي",
   "@language": {
     "type": "text",

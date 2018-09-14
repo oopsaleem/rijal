@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import '../src/my_app.dart';
+
+import 'my_app.dart';
 
 class ScopeModelWrapper extends StatelessWidget {
   @override

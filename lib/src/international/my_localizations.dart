@@ -10,6 +10,7 @@ import 'package:intl/intl.dart';
 import 'l10n/messages_all.dart';
 
 class MyLocalizations {
+
   static Future<MyLocalizations> load(Locale locale) {
     final String name =
         (locale.countryCode != null && locale.countryCode.isEmpty)
@@ -25,6 +26,13 @@ class MyLocalizations {
 
   static MyLocalizations of(BuildContext context) {
     return Localizations.of<MyLocalizations>(context, MyLocalizations);
+  }
+
+  String get appTitle {
+    return Intl.message(
+      'Dallal',
+      name: 'appTitle',
+    );
   }
 
   String get language {

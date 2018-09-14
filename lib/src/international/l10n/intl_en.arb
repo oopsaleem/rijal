@@ -1,6 +1,11 @@
 {
   "@@locale" :   "en" ,
   "@@last_modified": "2018-05-20T17:16:46.997414",
+  "appTitle": "Dallal",
+  "@appTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
   "language": "عربي",
   "@language": {
     "type": "text",

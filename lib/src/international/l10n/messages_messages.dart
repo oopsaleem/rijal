@@ -19,6 +19,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "appTitle" : MessageLookupByLibrary.simpleMessage("Dallal"),
     "language" : MessageLookupByLibrary.simpleMessage("عربي"),
     "login" : MessageLookupByLibrary.simpleMessage("Login"),
     "notValidUsername" : MessageLookupByLibrary.simpleMessage("Not Valid Username"),
