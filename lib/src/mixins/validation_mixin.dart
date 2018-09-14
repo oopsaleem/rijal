@@ -1,9 +1,9 @@
 class ValidationMixin {
-  String validateEmail(String value) {
-    return (!value.contains('@') ? 'Invalid email.' : null);
+  String validateEmail(String value, String errorMessage) {
+    return (!value.contains('@') ? errorMessage : null);
   }
 
-  String validatePassword(String value) {
-    return (value.length < 8 ? 'Invalid password.' : null); 
+  String validatePassword(String value, String errorMessage) {
+    return (value.length < 8 ? errorMessage : null); 
   }
 }

@@ -24,7 +24,9 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: true,
             theme: hrTheme,
             title: "Arabic Flutter",
-            home: new LoginScreen(),
+            home: Scaffold(
+              body: LoginScreen(),
+            ),
       ),
     );
   }

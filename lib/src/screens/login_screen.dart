@@ -38,7 +38,7 @@ class LoginScreenState extends State<LoginScreen> with ValidationMixin {
                 MyLocalizations.of(context).passwordIsTooShort,
               ),
               Container(margin: EdgeInsets.only(top: 20.0)),
-              submitButton(),
+              submitButton(MyLocalizations.of(context).login),
               const SizedBox(height: 25.0),
               changeLanguageButton(),
             ],
@@ -56,7 +56,7 @@ class LoginScreenState extends State<LoginScreen> with ValidationMixin {
         hintText: "user@test.com",
       ),
       keyboardType: TextInputType.emailAddress,
-      validator: (val) => !val.contains("@") ? errorMessage : null,
+      validator: (value) => validateEmail(value, errorMessage),
     );
   }
 
@@ -68,11 +68,11 @@ class LoginScreenState extends State<LoginScreen> with ValidationMixin {
         labelText: caption,
       ),
       obscureText: true,
-      validator: (val) => val.length < 8 ? errorMessage : null,
+      validator: (value) => validatePassword(value, errorMessage),
     );
   }
 
-  Widget submitButton() {
+  Widget submitButton(String caption) {
     return RaisedButton(
       onPressed: () {
         if (formKey.currentState.validate()) {
@@ -82,7 +82,7 @@ class LoginScreenState extends State<LoginScreen> with ValidationMixin {
       },
       color: Colors.blue,
       child: Text(
-        'Login',
+        caption,
         style: TextStyle(color: Colors.white),
       ),
     );
