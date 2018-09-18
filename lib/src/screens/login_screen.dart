@@ -39,7 +39,7 @@ class LoginScreenState extends State<LoginScreen> with ValidationMixin {
                 MyLocalizations.of(context).passwordIsTooShort,
               ),
               Container(margin: EdgeInsets.only(top: 20.0)),
-              submitButton(),
+              submitButton(MyLocalizations.of(context).login),
             ],
           ),
         ),
@@ -71,7 +71,7 @@ class LoginScreenState extends State<LoginScreen> with ValidationMixin {
     );
   }
 
-  Widget submitButton() {
+  Widget submitButton(String caption) {
     return RaisedButton(
       onPressed: () {
         if (formKey.currentState.validate()) {
@@ -81,7 +81,7 @@ class LoginScreenState extends State<LoginScreen> with ValidationMixin {
       },
       color: Colors.blue,
       child: Text(
-        'Login',
+        caption,
         style: TextStyle(color: Colors.white),
       ),
     );

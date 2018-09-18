@@ -5,7 +5,9 @@ import '../international/my_localizations.dart';
 import '../screens/app_settings.dart';
 import '../screens/login_screen.dart';
 import '../app_model.dart';
+import 'x_screen.dart';
 
+//onPressed: () { Navigator.of(context).push(MaterialPageRoute(builder: (context) => LoginScreen()));},
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,20 +18,11 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Container(child: Text('Home page content here!')),
-          RaisedButton(
-            child: Text('Add Item'),
-            onPressed: () {
-              print('add item clicked');
-            },
+          Container(child: 
+          Text('Home page content here!')),
+          FloatingActionButton(
+            onPressed: () { Navigator.of(context).push(MaterialPageRoute(builder: (context) => XScreen()));},
           ),
-          RaisedButton(
-            child: Text('Display Page'),
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => LoginScreen()));
-            },
-          )
         ],
       ),
     );
