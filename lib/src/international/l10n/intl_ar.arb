@@ -6,11 +6,6 @@
     "type": "text",
     "placeholders": {}
   },
-  "homeWelcome": "مرحبا بكم",
-  "@homeWelcome": {
-    "type": "text",
-    "placeholders": {}
-  },
   "language": "English",
   "@language": {
     "type": "text",

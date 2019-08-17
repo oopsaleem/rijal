@@ -34,6 +34,13 @@ class MyLocalizations {
     );
   }
 
+  String get welcome {
+    return Intl.message(
+      'Welcome to Dallal App',
+      name: 'welcome',
+    );
+  }
+
   String get language {
     return Intl.message(
       'عربي',
