@@ -14,14 +14,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       drawer: myDrawer(context),
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text(MyLocalizations.of(context).appTitle),
       ),
       body: Column(
         children: <Widget>[
-          Container(child: 
-          Text('Home page content here!')),
+          Container(child: Text("Welcome to DALLAL App")),
           FloatingActionButton(
-            onPressed: () { Navigator.of(context).push(MaterialPageRoute(builder: (context) => XScreen()));},
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => XScreen()));
+            },
           ),
         ],
       ),
@@ -30,42 +32,43 @@ class HomeScreen extends StatelessWidget {
 
   Widget myDrawer(BuildContext context) {
     return ScopedModelDescendant<AppModel>(
-      builder: (context, child, model) => Drawer(
-      child: ListView(
-        children: <Widget>[
-          DrawerHeader(child: Text(MyLocalizations.of(context).appTitle)),
-          MaterialButton(
-            onPressed: () {
-              model.changeDirection();
-            },
-            height: 60.0,
-            color: const Color.fromRGBO(119, 31, 17, 1.0),
-            child: new Text(
-              MyLocalizations.of(context).language,
-              style: new TextStyle(
-                color: Colors.white,
-                fontSize: 20.0,
-                fontWeight: FontWeight.w300,
-                letterSpacing: 0.3,
+        builder: (context, child, model) => Drawer(
+              child: ListView(
+                children: <Widget>[
+                  DrawerHeader(
+                      child: Text(MyLocalizations.of(context).appTitle)),
+                  MaterialButton(
+                    onPressed: () {
+                      model.changeDirection();
+                    },
+                    height: 60.0,
+                    color: const Color.fromRGBO(119, 31, 17, 1.0),
+                    child: new Text(
+                      MyLocalizations.of(context).language,
+                      style: new TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w300,
+                        letterSpacing: 0.3,
+                      ),
+                    ),
+                  ),
+                  FlatButton.icon(
+                      label: Text('Settings'),
+                      icon: Icon(Icons.settings),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => AppSettings()));
+                      }),
+                  FlatButton.icon(
+                      label: Text('Login'),
+                      icon: Icon(Icons.security),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => LoginScreen()));
+                      }),
+                ],
               ),
-            ),
-          ),
-          FlatButton.icon(
-              label: Text('Settings'),
-              icon: Icon(Icons.settings),
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => AppSettings()));
-              }),
-          FlatButton.icon(
-              label: Text('Login'),
-              icon: Icon(Icons.security),
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => LoginScreen()));
-              }),
-        ],
-      ),
-    ));
+            ));
   }
 }

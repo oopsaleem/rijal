@@ -10,7 +10,6 @@ import 'package:intl/intl.dart';
 import 'l10n/messages_all.dart';
 
 class MyLocalizations {
-
   static Future<MyLocalizations> load(Locale locale) {
     final String name =
         (locale.countryCode != null && locale.countryCode.isEmpty)
